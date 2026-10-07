@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurum Guard | Merchant Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<aside id="sidebar">
+  <div class="brand"><span class="logo">◆</span><div><b>Aurum Guard</b><small>Al-Nour Gold &amp; Jewelry</small></div></div>
+  <nav id="nav"></nav>
+  <div class="side-note">Alerts are decision support. A person always verifies before any action.</div>
+</aside>
+<div id="shade" onclick="toggleMenu()"></div>
+<div id="main">
+  <header>
+    <button class="icon-btn menu" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <h2 id="title">Dashboard</h2>
+    <input id="gsearch" class="gsearch" placeholder="Search items by ID, tag or type…">
+    <div class="hdr-right">
+      <span id="sys" class="pill ok"><i></i><span>System Operational</span></span>
+      <div class="notif-wrap">
+        <button class="icon-btn" onclick="toggleNotif(event)" aria-label="Notifications">🔔<b id="ncount"></b></button>
+        <div id="notif" class="notif"></div>
+      </div>
+      <div class="profile"><span class="avatar">N</span><span class="pname">Nour A.<small>Owner</small></span></div>
+    </div>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box" id="modalBox"></div></div>
+<script src="script.js"></script>
+</body>
+</html>
